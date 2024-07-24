@@ -1,3 +1,5 @@
+pip install streamlit
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -50,3 +52,5 @@ elif chart_type == '원 그래프':
     plt.pie(data_avg_age[age_column], labels=data_avg_age['행정구역'], autopct='%1.1f%%', startangle=140)
     plt.title(f'행정구역별 평균 연령 비율 ({age_criteria})')
     st.pyplot(plt)
+
+streamlit run app.py
